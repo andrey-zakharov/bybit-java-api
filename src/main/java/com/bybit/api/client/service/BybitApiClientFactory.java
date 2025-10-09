@@ -232,6 +232,10 @@ public class BybitApiClientFactory {
         return new BybitApiClientFactory(null, null, baseUrl, debugMode, DEFAULT_RECEIVING_WINDOW, LogOption.SLF4J.getLogOptionType(), "");
     }
 
+    public static BybitApiClientFactory newInstance(String apiKey, String secret, String baseUrl, boolean debugMode, String logOption) {
+        return new BybitApiClientFactory(apiKey, secret, baseUrl, debugMode, DEFAULT_RECEIVING_WINDOW, logOption, "");
+    }
+
     /**
      * Creates a new synchronous/blocking REST client to spot leverage token and spot margin endpoints.
      */

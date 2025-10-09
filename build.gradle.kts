@@ -5,6 +5,8 @@
 plugins {
     `java-library`
     `maven-publish`
+    kotlin("plugin.lombok") version "2.2.20"
+    id("io.freefair.lombok") version "8.14.2"
 }
 
 repositories {
