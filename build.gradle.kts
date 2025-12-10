@@ -37,7 +37,7 @@ dependencies {
 }
 
 group = "io.github.wuhewuhe"
-version = "1.2.8-yc3"
+version = "1.2.8-az"
 description = "bybit-java-api"
 java.sourceCompatibility = JavaVersion.VERSION_11
 

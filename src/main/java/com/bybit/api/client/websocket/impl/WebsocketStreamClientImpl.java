@@ -269,7 +269,7 @@ public class WebsocketStreamClientImpl implements WebsocketStreamClient {
                 LOGGER.info("Authentication successful.");
                 flushMessageQueue(); // Send queued messages after successful authentication
             } else {
-                LOGGER.error("Authentication failed.");
+                LOGGER.error("Authentication failed: {}", msg);
             }
         }
         
