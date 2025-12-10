@@ -264,7 +264,7 @@ public class WebsocketStreamClientImpl implements WebsocketStreamClient {
     public void onMessage(String msg) throws JsonProcessingException {
         if (requiresAuthentication(path) && msg.contains("\"op\":\"auth\"")) {
             // Check if authentication was successful
-            isAuthenticated = msg.contains("\"retCode\":0");
+            isAuthenticated = msg.contains("\"success\":true");
             if (isAuthenticated) {
                 LOGGER.info("Authentication successful.");
                 flushMessageQueue(); // Send queued messages after successful authentication
